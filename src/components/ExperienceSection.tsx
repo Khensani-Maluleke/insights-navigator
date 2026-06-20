@@ -114,7 +114,7 @@ const ExperienceSection = () => {
                 <div className="bg-card rounded-2xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow">
                   <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                     <div>
-                      <h3 className="text-lg font-serif font-semibold text-foreground">{job.title}</h3>
+                      <h3 className="text-lg font-sans font-semibold text-foreground">{job.title}</h3>
                       <p className="text-sm text-lilac font-medium">{job.company}</p>
                     </div>
                     <span className="text-xs bg-lilac-light text-lilac-dark px-3 py-1 rounded-full font-medium whitespace-nowrap">

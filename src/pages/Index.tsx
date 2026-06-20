@@ -5,6 +5,7 @@ import ExperienceSection from "@/components/ExperienceSection";
 import EducationSection from "@/components/EducationSection";
 import SkillsSection from "@/components/SkillsSection";
 import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -16,9 +17,7 @@ const Index = () => {
       <EducationSection />
       <SkillsSection />
       <ContactSection />
-      <footer className="py-8 text-center text-xs text-muted-foreground border-t border-border">
-        © 2025 Tshilidzi Mphadzha. All rights reserved.
-      </footer>
+      <Footer />
     </div>
   );
 };

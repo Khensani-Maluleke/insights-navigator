@@ -7,6 +7,7 @@ const education = [
     institution: "Salesforce",
     date: "Dec 2022",
     detail: "Credential ID: 2774575",
+    country: "South Africa",
     link: "https://sforce.co/verifycerts",
   },
   {
@@ -15,6 +16,7 @@ const education = [
     institution: "Salesforce",
     date: "Nov 2022",
     detail: "Credential ID: 2742185",
+    country: "South Africa",
     link: "https://sforce.co/verifycerts",
   },
   {
@@ -22,6 +24,7 @@ const education = [
     title: "PGP: Data Science & Business Analytics",
     institution: "The University of Texas at Austin – Red McCombs School of Business",
     date: "Dec 2019 – Sep 2020",
+    country: "India",
     link: "http://www.mccombs.utexas.edu/",
   },
   {
@@ -29,6 +32,7 @@ const education = [
     title: "Bachelor of Sciences, Computer Science and Informatics",
     institution: "University of Johannesburg",
     date: "Dec 2012 – Dec 2017",
+    country: "South Africa",
     link: "https://www.uj.ac.za/",
   },
 ];
@@ -38,7 +42,7 @@ const EducationSection = () => {
     <section id="education" className="section-padding bg-background">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-gradient mb-12 text-center">
-          Education & Certifications
+          Education and Training
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
           {education.map((item, idx) => (
@@ -52,9 +56,10 @@ const EducationSection = () => {
                   )}
                 </div>
                 <div>
-                  <h3 className="font-serif font-semibold text-foreground">{item.title}</h3>
+                  <h3 className="font-sans font-semibold text-foreground">{item.title}</h3>
                   <p className="text-sm text-lilac font-medium">{item.institution}</p>
                   <p className="text-xs text-muted-foreground mt-1">{item.date}</p>
+                  <p className="text-xs text-muted-foreground mt-1">{item.country}</p>
                   {item.detail && <p className="text-xs text-muted-foreground">{item.detail}</p>}
                   {item.link && (
                     <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-xs text-lilac hover:underline mt-1 inline-block">

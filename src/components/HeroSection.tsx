@@ -1,39 +1,102 @@
-import heroBg from "@/assets/hero-bg.jpg";
-import profileImg from "@/assets/profile-placeholder.png";
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { Button } from "./ui/button";
+
+import profileImg from "@/assets/tshilidzi_profile.jpeg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <img
-        src={heroBg}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover"
-        width={1920}
-        height={1080}
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-lilac-dark/60 via-lilac/40 to-background/90" />
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in">
-        <img
-          src={profileImg}
-          alt="Tshilidzi Mphadzha"
-          className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 border-4 border-primary-foreground/80 shadow-xl"
-          width={512}
-          height={512}
-        />
-        <h1 className="text-4xl md:text-6xl font-serif font-bold text-primary-foreground mb-4">
-          Tshilidzi Mphadzha
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 scroll-mt-28 bg-zinc-800"
+    >
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] text-center px-4">
+        {/* Badge */}
+        <span className="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-wider uppercase rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 animate-fade-up">
+          Data Science • Business Intelligence • Analytics • Insights Professional
+        </span>
+
+        {/* Heading */}
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight animate-fade-up">
+          <span className="block">Hi, I'm</span>
+          <span className="block">Tshilidzi Mphadzha</span>
         </h1>
-        <p className="text-lg md:text-xl text-primary-foreground/90 font-sans font-light max-w-2xl mx-auto mb-8">
-          Data Science, Business Intelligence, Analytics &amp; Insights Professional
-        </p>
-        <div className="flex flex-wrap gap-3 justify-center">
-          <a href="#about" className="px-6 py-3 bg-primary-foreground text-lilac-dark font-medium rounded-lg hover:bg-primary-foreground/90 transition-all shadow-md">
-            About Me
-          </a>
-          <a href="#contact" className="px-6 py-3 border-2 border-primary-foreground text-primary-foreground font-medium rounded-lg hover:bg-primary-foreground/10 transition-all">
-            Get in Touch
-          </a>
+
+        {/* Profile Picture */}
+        <div className="mt-6 flex justify-center animate-fade-up">
+          <img
+            src={profileImg}
+            alt="Tshilidzi Mphadzha"
+            className="w-40 h-40 sm:w-60 sm:h-60 rounded-full border-8 border-white/80 object-cover shadow-xl"
+          />
         </div>
+
+        {/* Description */}
+        <p className="mt-6 text-lg md:text-xl text-white/90 max-w-2xl mx-auto animate-fade-up">
+          I am a Data Science, Business Intelligence, and Analytics professional passionate about transforming complex
+          data into meaningful insights that drive strategic decision-making. I bridge the gap between data and business objectives,
+          helping organizations uncover opportunities, optimize performance, and make informed decisions.
+        </p>
+
+        {/* Buttons */}
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up">
+          <Button
+            size="lg"
+            className="bg-white text-lilac-dark hover:bg-white/90"
+            asChild
+          >
+            <a href="#about">About Me</a>
+          </Button>
+
+          <Button
+            variant="outline"
+            size="lg"
+            className="border-white text-white hover:bg-white/10"
+            asChild
+          >
+            <a href="#contact">Get in Touch</a>
+          </Button>
+        </div>
+
+        {/* Social Icons */}
+        <div className="mt-10 flex items-center justify-center gap-5 animate-fade-up">
+          {[
+            {
+              icon: Github,
+              href: "https://github.com/",
+              label: "GitHub",
+            },
+            {
+              icon: Linkedin,
+              href: "https://linkedin.com/",
+              label: "LinkedIn",
+            },
+            {
+              icon: Mail,
+              href: "mailto:your-email@example.com",
+              label: "Email",
+            },
+          ].map(({ icon: Icon, href, label }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="p-3 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300"
+            >
+              <Icon size={20} />
+            </a>
+          ))}
+        </div>
+
+        {/* Scroll Arrow */}
+        <a
+          href="#about"
+          className="inline-block mt-16 text-white/80 hover:text-white animate-bounce"
+        >
+          <ArrowDown size={24} />
+        </a>
       </div>
     </section>
   );
