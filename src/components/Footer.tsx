@@ -25,16 +25,16 @@ const Footer = () => (
             label: "Email",
           },
         ].map(({ icon: Icon, href, label }) => (
-          <a
-            key={label}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={label}
-            className="text-muted-foreground hover:text-primary transition-colors"
-          >
-            <Icon size={18} />
-          </a>
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="p-3 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300"
+            >
+              <Icon size={20} />
+            </a>
         ))}
       </div>
     </div>

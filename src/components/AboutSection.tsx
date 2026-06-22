@@ -8,22 +8,10 @@ const AboutSection = () => {
           About Me
         </h2>
         <div className="grid md:grid-cols-3 gap-8 mb-10">
-          {[
-            { icon: Flag, label: "Nationality", value: "South African" },
-            { icon: Calendar, label: "Date of Birth", value: "12 Dec 1994" },
-            { icon: User, label: "Gender", value: "Female" },
-          ].map((item) => (
-            <div key={item.label} className="flex items-center gap-3 bg-card rounded-xl p-4 shadow-sm border border-border">
-              <div className="p-2 rounded-lg bg-lilac-light">
-                <item.icon className="w-5 h-5 text-lilac" />
-              </div>
-              <div>
-                <p className="text-xs text-muted-foreground">{item.label}</p>
-                <p className="font-medium text-foreground">{item.value}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+  {[ { icon: Flag, label: "Nationality", value: "South African" },
+     { icon: Calendar, label: "Date of Birth", value: "12 Dec 1994" },
+      { icon: User, label: "Gender", value: "Female" }, ].map((item) => ( <div key={item.label} className="group flex items-center gap-4 bg-card rounded-xl p-4 shadow-sm border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300" > <div className="relative"> <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-gray-400/30 to-gray-500/10 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" /> <div className="relative p-3 rounded-xl bg-gradient-to-br from-gray-100 to-gray-300 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300"> <item.icon className="w-5 h-5 text-gray-700 group-hover:text-gray-900 transition-colors duration-300" /> </div> </div> <div> <p className="text-xs text-muted-foreground">{item.label}</p> <p className="font-medium text-foreground">{item.value}</p> </div> </div> ))}
+</div>
         <div className="bg-card rounded-2xl p-6 md:p-8 shadow-sm border border-border space-y-4 text-muted-foreground leading-relaxed">
           <p>
             Data Science, business intelligence, analytics & Insights professional with ~7 years experience across management
