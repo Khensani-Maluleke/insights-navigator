@@ -39,11 +39,11 @@ const AboutSection = () => {
           {/* LEFT SIDE */}
           <div className="space-y-6">
 
-            <img
-              src={tshilidzi2}
-              alt="Profile"
-              className="w-full h-[700px] md:h-[550px] object-cover rounded-2xl border-4 border-primary shadow-lg"
-            />
+           <img
+  src={tshilidzi2}
+  alt="Profile"
+  className="w-full h-[700px] md:h-[370px] object-cover rounded-2xl shadow-lg"
+/>
 
             <div className="text-muted-foreground leading-relaxed">
               <p>
