@@ -5,6 +5,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="section-padding bg-background">
       <div className="max-w-6xl mx-auto">
+
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-gradient mb-12 text-center">
           About Me
         </h2>
@@ -38,15 +39,13 @@ const AboutSection = () => {
           {/* LEFT SIDE */}
           <div className="space-y-6">
 
-            {/* IMAGE (same height as first paragraph) */}
             <img
               src={tshilidzi2}
               alt="Profile"
               className="w-full h-[700px] md:h-[550px] object-cover rounded-2xl border-4 border-primary shadow-lg"
             />
 
-            {/* FIRST PARAGRAPH (directly under image) */}
-           <div className="text-muted-foreground leading-relaxed">
+            <div className="text-muted-foreground leading-relaxed">
               <p>
                 Data Science, business intelligence, analytics & insights
                 professional with ~7 years experience across management consulting
@@ -55,37 +54,37 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Right side - picture area */}
-          <div className="lg:col-span-2">
-            <div className="sticky top-24">
-              <div className="relative group">
-                {/* Decorative background blob */}
-                <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-lilac-300/40 via-lilac-200/30 to-lilac-400/40 blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-                
-                {/* Image frame */}
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border-2 border-dashed border-lilac-300 bg-gradient-to-br from-lilac-50 to-lilac-100/50 flex flex-col items-center justify-center text-center p-8 shadow-lg">
-                  <div className="w-20 h-20 rounded-full bg-lilac-200/60 flex items-center justify-center mb-4">
-                    <User className="w-10 h-10 text-lilac-700" />
-                  </div>
-                  <p className="text-lilac-800 font-medium mb-2">Your Photo</p>
-                  <p className="text-sm text-lilac-600/80 max-w-[200px]">
-                    Replace this placeholder with your professional headshot
-                  </p>
-                </div>
+          {/* RIGHT SIDE */}
+          <div className="space-y-6">
 
-                {/* Corner accent */}
-                <div className="absolute -bottom-3 -right-3 w-24 h-24 rounded-2xl bg-gradient-to-br from-lilac-400 to-lilac-500 -z-10" />
-              </div>
-
-              {/* Caption card */}
-              <div className="mt-6 bg-card rounded-xl p-5 border border-border shadow-sm">
-                <p className="text-sm text-muted-foreground italic text-center">
-                  "Data tells a story — my work is to make that story actionable."
-                </p>
-              </div>
+            <div className="text-muted-foreground leading-relaxed">
+              <p>
+                Successfully led projects on implementation of enterprise systems,
+                product growth, intelligent automation (RPA), data aggregation,
+                and data governance. Used analytics and machine learning insights
+                to improve customer experience, profitability, and operational efficiency.
+              </p>
             </div>
+
+            <div className="text-muted-foreground leading-relaxed">
+              <p>
+                Tshilidzi’s unorthodox way of thinking allows her to generate
+                out-of-the-box and practical solutions. She is goal-oriented,
+                enjoys challenges, and consistently maintains high standards of quality.
+              </p>
+            </div>
+
+            <div className="text-muted-foreground leading-relaxed">
+              <p>
+                She thrives in fast-paced, team-oriented environments and is
+                proactive, forward-thinking, and detail-oriented. Her communication
+                and problem-solving skills have been key strengths throughout her career.
+              </p>
+            </div>
+
           </div>
         </div>
+
       </div>
     </section>
   );
