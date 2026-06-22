@@ -42,20 +42,22 @@ const AboutSection = () => {
            <img
   src={tshilidzi2}
   alt="Profile"
-  className="w-full h-[700px] md:h-[370px] object-cover rounded-2xl shadow-lg"
+  className="w-full h-[700px] md:h-[500px] object-cover rounded-2xl shadow-lg"
 />
 
-            <div className="text-muted-foreground leading-relaxed">
+           
+          </div>
+
+          {/* RIGHT SIDE */}
+          <div className="space-y-6">
+
+             <div className="text-muted-foreground leading-relaxed">
               <p>
                 Data Science, business intelligence, analytics & insights
                 professional with ~7 years experience across management consulting
                 and financial services.
               </p>
             </div>
-          </div>
-
-          {/* RIGHT SIDE */}
-          <div className="space-y-6">
 
             <div className="text-muted-foreground leading-relaxed">
               <p>
