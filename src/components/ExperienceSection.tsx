@@ -132,7 +132,7 @@ const ExperienceSection = () => {
     <section id="experience" className="section-padding bg-secondary/50">
       <div className="max-w-5xl mx-auto">
 
-        <h2 className="text-3xl md:text-4xl font-serif font-bold text-gradient mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-gradient mb-12 text-center font-sans">
           Work Experience
         </h2>
 
@@ -142,9 +142,10 @@ const ExperienceSection = () => {
               key={idx}
               className="bg-card rounded-2xl p-6 border border-border shadow-sm hover:shadow-md transition-shadow"
             >
+              {/* Header */}
               <div className="flex flex-wrap justify-between gap-3 mb-2">
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground">
+                  <h3 className="text-lg font-semibold text-foreground font-sans">
                     {job.title}
                   </h3>
                   <p className="text-sm text-lilac font-medium">
@@ -152,7 +153,8 @@ const ExperienceSection = () => {
                   </p>
                 </div>
 
-                <span className="text-xs text-muted-foreground font-medium">
+                {/* Removed bubble styling */}
+                <span className="text-sm text-muted-foreground font-normal">
                   {job.period}
                 </span>
               </div>
@@ -165,6 +167,7 @@ const ExperienceSection = () => {
                 {job.overview}
               </p>
 
+              {/* Bullets */}
               <ul className="space-y-2">
                 {job.bullets.map((b, i) => (
                   <li key={i} className="text-sm text-muted-foreground flex gap-2">
@@ -174,6 +177,7 @@ const ExperienceSection = () => {
                 ))}
               </ul>
 
+              {/* Projects */}
               {job.projects && (
                 <div className="mt-4 pt-4 border-t border-border">
                   <p className="text-xs font-semibold text-foreground mb-2">
@@ -191,6 +195,7 @@ const ExperienceSection = () => {
                 </div>
               )}
 
+              {/* Departments */}
               {job.departments && (
                 <div className="mt-4 pt-4 border-t border-border">
                   <p className="text-xs font-semibold text-foreground mb-2">
