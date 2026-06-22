@@ -55,41 +55,35 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* RIGHT SIDE */}
-          <div className="space-y-6">
+          {/* Right side - picture area */}
+          <div className="lg:col-span-2">
+            <div className="sticky top-24">
+              <div className="relative group">
+                {/* Decorative background blob */}
+                <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-lilac-300/40 via-lilac-200/30 to-lilac-400/40 blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                
+                {/* Image frame */}
+                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border-2 border-dashed border-lilac-300 bg-gradient-to-br from-lilac-50 to-lilac-100/50 flex flex-col items-center justify-center text-center p-8 shadow-lg">
+                  <div className="w-20 h-20 rounded-full bg-lilac-200/60 flex items-center justify-center mb-4">
+                    <User className="w-10 h-10 text-lilac-700" />
+                  </div>
+                  <p className="text-lilac-800 font-medium mb-2">Your Photo</p>
+                  <p className="text-sm text-lilac-600/80 max-w-[200px]">
+                    Replace this placeholder with your professional headshot
+                  </p>
+                </div>
 
-             <div className="text-muted-foreground leading-relaxed"> <p>
-                Successfully led projects on implementation
-                of enterprise systems, product growth, intelligent automation (RPA),
-                data aggregation, data governance, utilizing insights and analytics
-                from deployment of machine learning models and RPA solutions to
-                improve customer experience, bottom line earnings, optimize business
-                processes as well as operational efficiency.
-              </p>
+                {/* Corner accent */}
+                <div className="absolute -bottom-3 -right-3 w-24 h-24 rounded-2xl bg-gradient-to-br from-lilac-400 to-lilac-500 -z-10" />
+              </div>
+
+              {/* Caption card */}
+              <div className="mt-6 bg-card rounded-xl p-5 border border-border shadow-sm">
+                <p className="text-sm text-muted-foreground italic text-center">
+                  "Data tells a story — my work is to make that story actionable."
+                </p>
+              </div>
             </div>
-
-            {/* SECOND PARAGRAPH */}
-            <div className="text-muted-foreground leading-relaxed"> <p>
-    
-                Tshilidzi’s unorthodox way of thinking confirms that she can
-                suggest a variety of out-of-the-box and practical ideas when facing
-                a problem. She is goal-oriented and enjoys challenges as they
-                increase her appetite to learn. She consistently sets high standards
-                for herself and ensures her output is of high quality and reflective
-                of her professionalism.
-              </p>
-            </div>
-
-            {/* THIRD PARAGRAPH */}
-           <div className="text-muted-foreground leading-relaxed"> <p>
-                She is also enthusiastic about working in a fast-paced and team-
-                oriented environment. With her willingness to always learn and grow,
-                she has developed strong competencies such as being proactive,
-                forward-thinking, and detail-oriented. Her communication and
-                problem-solving skills have been key strengths in her career.
-              </p>
-            </div>
-
           </div>
         </div>
       </div>
