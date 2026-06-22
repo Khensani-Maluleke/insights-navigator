@@ -36,11 +36,20 @@
 
     --radius: 0.75rem;
 
-    --lilac: 0 0% 100%;
-    --lilac-light: 220 10% 88%;
-    --lilac-dark: 220 12% 15%;
-    --lavender: 220 10% 90%;
-    --plum: 0 0% 100%;
+    --lilac: 260 60% 80%;
+    --lilac-50: 260 50% 96%;
+    --lilac-100: 260 50% 92%;
+    --lilac-200: 260 50% 82%;
+    --lilac-300: 260 50% 72%;
+    --lilac-400: 260 50% 62%;
+    --lilac-500: 260 50% 52%;
+    --lilac-600: 260 50% 42%;
+    --lilac-700: 260 50% 32%;
+    --lilac-800: 260 50% 22%;
+    --lilac-light: 260 60% 90%;
+    --lilac-dark: 260 60% 30%;
+    --lavender: 270 50% 85%;
+    --plum: 290 50% 65%;
 
     --sidebar-background: 220 12% 10%;
     --sidebar-foreground: 220 15% 95%;
