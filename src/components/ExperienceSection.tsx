@@ -17,7 +17,8 @@ const jobs: Job[] = [
     company: "Standard Bank | Group",
     period: "Oct 2023 – Present",
     city: "Johannesburg, South Africa",
-    overview: "Subject matter expert on product analytics, macroeconomics and business intelligence workstreams as a technical developer behind the MIS models servicing the Group PPB Team.",
+    overview:
+      "Subject matter expert on product analytics, macroeconomics and business intelligence workstreams as a technical developer behind the MIS models servicing the Group PPB Team.",
     bullets: [
       "Oversee collecting and analyzing data from various internal and external sources using fit for purpose tools and techniques.",
       "Interpret data analysis results to identify trends, patterns, and insights; create reports, dashboards and presentations for group-level stakeholders.",
@@ -30,7 +31,8 @@ const jobs: Job[] = [
     company: "Standard Bank | Standard Trust Limited",
     period: "Mar 2022 – Oct 2023",
     city: "Johannesburg, South Africa",
-    overview: "Lead as subject matter expert on all data quality initiatives, ownership, and mature information management practice.",
+    overview:
+      "Lead as subject matter expert on all data quality initiatives, ownership, and mature information management practice.",
     bullets: [
       "Analyze and present business intelligence and recommendations to CEO and Executive Committee on organizational performance, risks and opportunities.",
       "Develop Data Models & Data Products for a variety of use cases.",
@@ -45,7 +47,8 @@ const jobs: Job[] = [
     company: "Standard Bank | South Africa",
     period: "Jan 2021 – Mar 2022",
     city: "Johannesburg, South Africa",
-    overview: "Build scalable infrastructure for delivering business insights from raw data sources, optimizing data flow and collection.",
+    overview:
+      "Build scalable infrastructure for delivering business insights from raw data sources, optimizing data flow and collection.",
     bullets: [
       "Built scalable infrastructure to attain 110% budgetary performance utilizing business insights and analytics.",
       "Lead data and metrics work stream for automations in Credit, Card, Cash, Wealth, Regulatory & Payments to improve turnaround time by 80%.",
@@ -56,7 +59,8 @@ const jobs: Job[] = [
     company: "Standard Bank | South Africa",
     period: "Feb 2020 – Jan 2021",
     city: "Johannesburg, South Africa",
-    overview: "Provide Group Vehicle and Asset Finance (VAF) team with insights and analytics using analytical techniques and economic data analysis.",
+    overview:
+      "Provide Group Vehicle and Asset Finance (VAF) team with insights and analytics using analytical techniques and economic data analysis.",
     bullets: [
       "Conducted macro-economic research to design models and identify levers for product uptake increase by 35% across 19 countries.",
       "Identified cross-selling opportunities resulting in ~13% drop in churn over 7 months and improved customer lifetime value.",
@@ -68,32 +72,57 @@ const jobs: Job[] = [
     company: "Standard Bank | South Africa",
     period: "Oct 2018 – Feb 2020",
     city: "Johannesburg, South Africa",
-    overview: "Support business objectives through adoption of data tools and methodologies to provide insights for profitability, market share, and efficiency.",
+    overview:
+      "Support business objectives through adoption of data tools and methodologies to provide insights for profitability, market share, and efficiency.",
     bullets: [
       "Co-developed customer retention tool offering 360 view of products subscription leveraging ML models across 5 countries with 54% improved retention.",
       "Drove adoption of Power BI, QlikView and analytics tools via trainings reaching over 500 employees.",
       "Completed Analytics Vidhya Data Science Certification (2019).",
     ],
     projects: [
-      { name: "Customer 360 Retention App", description: "Retaining primary customers and increasing share of wallet using Power Apps, Power BI and R Studio." },
-      { name: "Instant Money Automated Reporting", description: "Self-service reporting for trends, health checks, budgeting and forecasting using Power BI and SAS." },
-      { name: "Competitor Analysis", description: "Identifying market opportunities through SWOT analysis, market share analysis and competition portfolio building." },
+      {
+        name: "Customer 360 Retention App",
+        description:
+          "Retaining primary customers and increasing share of wallet using Power Apps, Power BI and R Studio.",
+      },
+      {
+        name: "Instant Money Automated Reporting",
+        description:
+          "Self-service reporting for trends, health checks, budgeting and forecasting using Power BI and SAS.",
+      },
+      {
+        name: "Competitor Analysis",
+        description:
+          "Identifying market opportunities through SWOT analysis, market share analysis and competition portfolio building.",
+      },
     ],
-    departments: ["Cards and Payments: Customer Value Management, Platform Services/Emerging Payments", "Group Africa Regions: Customer Insights and Analytics"],
+    departments: [
+      "Cards and Payments: Customer Value Management, Platform Services/Emerging Payments",
+      "Group Africa Regions: Customer Insights and Analytics",
+    ],
   },
   {
     title: "Management Consultant: Advisory",
     company: "PricewaterhouseCoopers (PwC) | South Africa",
     period: "Dec 2017 – Oct 2018",
     city: "Johannesburg, South Africa",
-    overview: "Consulted across finance and technology scope, advising on reporting and system audit standards.",
+    overview:
+      "Consulted across finance and technology scope, advising on reporting and system audit standards.",
     bullets: [
       "Consulted across industries within finance and technology, advising on reporting and system audit standards.",
       "Successfully co-customized, tested and deployed Workday as HR tool within PwC South Africa.",
     ],
     projects: [
-      { name: "Adcorp Holdings", description: "Restructuring reporting for management account structures using Microsoft Visio, Excel, Finnivo and Power BI." },
-      { name: "PwC Workday Implementation", description: "Implementation and testing of Workday HRMS using Workday and Microsoft Excel." },
+      {
+        name: "Adcorp Holdings",
+        description:
+          "Restructuring reporting for management account structures using Microsoft Visio, Excel, Finnivo and Power BI.",
+      },
+      {
+        name: "PwC Workday Implementation",
+        description:
+          "Implementation and testing of Workday HRMS using Workday and Microsoft Excel.",
+      },
     ],
   },
 ];
@@ -102,57 +131,81 @@ const ExperienceSection = () => {
   return (
     <section id="experience" className="section-padding bg-secondary/50">
       <div className="max-w-5xl mx-auto">
+
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-gradient mb-12 text-center">
           Work Experience
         </h2>
-        <div className="relative">
-          <div className="absolute left-4 md:left-8 top-0 bottom-0 w-0.5 bg-lilac/30" />
-          <div className="space-y-8">
-            {jobs.map((job, idx) => (
-              <div key={idx} className="relative pl-12 md:pl-20">
-                <div className="absolute left-2 md:left-6 top-1 w-5 h-5 rounded-full bg-lilac border-4 border-background shadow" />
-                <div className="bg-card rounded-2xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow">
-                  <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
-                    <div>
-                      <h3 className="text-lg font-sans font-semibold text-foreground">{job.title}</h3>
-                      <p className="text-sm text-lilac font-medium">{job.company}</p>
-                    </div>
-                    <span className="text-xs bg-lilac-light text-lilac-dark px-3 py-1 rounded-full font-medium whitespace-nowrap">
-                      {job.period}
-                    </span>
-                  </div>
-                  <p className="text-xs text-muted-foreground mb-3">{job.city}</p>
-                  <p className="text-sm text-muted-foreground mb-3 italic">{job.overview}</p>
-                  <ul className="space-y-1.5">
-                    {job.bullets.map((b, i) => (
-                      <li key={i} className="text-sm text-muted-foreground flex gap-2">
-                        <span className="text-lilac mt-1.5 shrink-0">•</span>
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  {job.projects && (
-                    <div className="mt-4 pt-3 border-t border-border">
-                      <p className="text-xs font-semibold text-foreground mb-2">Key Projects:</p>
-                      {job.projects.map((p, i) => (
-                        <p key={i} className="text-xs text-muted-foreground mb-1">
-                          <span className="font-medium text-foreground">{p.name}:</span> {p.description}
-                        </p>
-                      ))}
-                    </div>
-                  )}
-                  {job.departments && (
-                    <div className="mt-3 pt-3 border-t border-border">
-                      <p className="text-xs font-semibold text-foreground mb-1">Departments Rotated:</p>
-                      {job.departments.map((d, i) => (
-                        <p key={i} className="text-xs text-muted-foreground">• {d}</p>
-                      ))}
-                    </div>
-                  )}
+
+        <div className="space-y-8">
+          {jobs.map((job, idx) => (
+            <div
+              key={idx}
+              className="bg-card rounded-2xl p-6 border border-border shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="flex flex-wrap justify-between gap-3 mb-2">
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground">
+                    {job.title}
+                  </h3>
+                  <p className="text-sm text-lilac font-medium">
+                    {job.company}
+                  </p>
                 </div>
+
+                <span className="text-xs text-muted-foreground font-medium">
+                  {job.period}
+                </span>
               </div>
-            ))}
-          </div>
+
+              <p className="text-xs text-muted-foreground mb-3">
+                {job.city}
+              </p>
+
+              <p className="text-sm text-muted-foreground italic mb-4">
+                {job.overview}
+              </p>
+
+              <ul className="space-y-2">
+                {job.bullets.map((b, i) => (
+                  <li key={i} className="text-sm text-muted-foreground flex gap-2">
+                    <span className="text-lilac">•</span>
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {job.projects && (
+                <div className="mt-4 pt-4 border-t border-border">
+                  <p className="text-xs font-semibold text-foreground mb-2">
+                    Key Projects
+                  </p>
+
+                  {job.projects.map((p, i) => (
+                    <p key={i} className="text-xs text-muted-foreground mb-1">
+                      <span className="font-medium text-foreground">
+                        {p.name}:
+                      </span>{" "}
+                      {p.description}
+                    </p>
+                  ))}
+                </div>
+              )}
+
+              {job.departments && (
+                <div className="mt-4 pt-4 border-t border-border">
+                  <p className="text-xs font-semibold text-foreground mb-2">
+                    Departments
+                  </p>
+
+                  {job.departments.map((d, i) => (
+                    <p key={i} className="text-xs text-muted-foreground">
+                      • {d}
+                    </p>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
