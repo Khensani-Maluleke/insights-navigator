@@ -132,7 +132,7 @@ const ExperienceSection = () => {
     <section id="experience" className="section-padding bg-secondary/50">
       <div className="max-w-5xl mx-auto">
 
-        <h2 className="text-3xl md:text-4xl font-bold text-gradient mb-12 text-center font-sans">
+        <h2 className="text-3xl md:text-4xl font-bold text-gradient mb-12 text-center font-serif">
           Work Experience
         </h2>
 
