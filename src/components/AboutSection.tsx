@@ -7,16 +7,11 @@ import {
   FileSpreadsheet,
   FileText,
   Presentation,
-  Brain,
-  Code2,
   Workflow,
+  Code2,
 } from "lucide-react";
 
-import {
-  SiPython,
-  SiSalesforce,
-  SiR,
-} from "react-icons/si";
+import { SiPython, SiSalesforce, SiR } from "react-icons/si";
 
 import tshilidzi2 from "../assets/tshilidzi2.jpeg";
 
@@ -72,12 +67,8 @@ const AboutSection = () => {
               </div>
 
               <div>
-                <p className="text-xs text-muted-foreground">
-                  {item.label}
-                </p>
-                <p className="font-medium text-foreground">
-                  {item.value}
-                </p>
+                <p className="text-xs text-muted-foreground">{item.label}</p>
+                <p className="font-medium text-foreground">{item.value}</p>
               </div>
             </div>
           ))}
@@ -87,49 +78,32 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-2 gap-10 items-center">
 
           {/* IMAGE */}
-          <div>
-            <div className="rounded-2xl overflow-hidden shadow-xl">
-              <img
-                src={tshilidzi2}
-                alt="Tshilidzi"
-                className="w-full h-auto"
-              />
-            </div>
+          <div className="rounded-2xl overflow-hidden shadow-xl">
+            <img src={tshilidzi2} alt="Tshilidzi" className="w-full h-auto" />
           </div>
 
           {/* TEXT */}
           <div className="space-y-6 text-muted-foreground leading-relaxed">
 
             <p>
-              Data Science, business intelligence, analytics & insights
-              professional with ~7 years experience across management
-              consulting and financial services.
+              I am a Data Science, Business Intelligence, Analytics, and Insights professional
+              with approximately seven years of experience across management consulting and
+              financial services. Throughout my career, I have leveraged data-driven insights
+              to support strategic decision-making, drive business growth, and improve operational performance.
             </p>
 
             <p>
-              Successfully led projects on implementation of enterprise
-              systems, product growth, intelligent automation (RPA),
-              data aggregation, and data governance.
+              I have successfully led projects involving the implementation of enterprise systems,
+              product growth initiatives, intelligent automation (RPA), data aggregation,
+              and data governance. By leveraging analytics, business intelligence, and
+              machine learning insights, I have helped improve customer experience, enhance profitability,
+              optimize business processes, and drive operational efficiency.
             </p>
 
             <p>
-              Used analytics and machine learning insights to improve
-              customer experience, profitability, and operational
-              efficiency.
-            </p>
-
-            <p>
-              Tshilidzi’s unorthodox way of thinking allows her to
-              generate out-of-the-box and practical solutions.
-              She is goal-oriented, enjoys challenges, and consistently
-              maintains high standards of quality.
-            </p>
-
-            <p>
-              She thrives in fast-paced, team-oriented environments and
-              is proactive, forward-thinking, and detail-oriented.
-              Her communication and problem-solving skills have been
-              key strengths throughout her career.
+              My unorthodox approach to problem-solving enables me to develop innovative and practical
+              solutions to complex challenges. I am highly goal-oriented, thrive in dynamic environments,
+              and consistently hold myself to high standards of excellence.
             </p>
 
           </div>
@@ -145,72 +119,40 @@ const AboutSection = () => {
           {/* ROW 1 */}
           <div className="overflow-hidden mb-6">
             <div className="animate-marquee flex gap-4 min-w-max">
-
-              {[...analyticsSkills, ...analyticsSkills].map(
-                (skill, index) => {
-                  const Icon = skill.icon;
-
-                  return (
-                    <div
-                      key={index}
-                      className="
-                        flex items-center gap-3
-                        px-6 py-4
-                        rounded-2xl
-                        bg-card/80
-                        backdrop-blur-sm
-                        border border-border
-                        shadow-sm
-                        hover:shadow-lg
-                        hover:-translate-y-1
-                        transition-all duration-300
-                        min-w-fit
-                      "
-                    >
-                      <Icon size={24} className="shrink-0" />
-                      <span className="whitespace-nowrap font-medium">
-                        {skill.name}
-                      </span>
-                    </div>
-                  );
-                }
-              )}
+              {[...analyticsSkills, ...analyticsSkills].map((skill, index) => {
+                const Icon = skill.icon;
+                return (
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-card/80 backdrop-blur-sm border border-border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 min-w-fit"
+                  >
+                    <Icon size={24} className="shrink-0" />
+                    <span className="whitespace-nowrap font-medium">
+                      {skill.name}
+                    </span>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
           {/* ROW 2 */}
           <div className="overflow-hidden">
             <div className="animate-marquee-reverse flex gap-4 min-w-max">
-
-              {[...engineeringSkills, ...engineeringSkills].map(
-                (skill, index) => {
-                  const Icon = skill.icon;
-
-                  return (
-                    <div
-                      key={index}
-                      className="
-                        flex items-center gap-3
-                        px-6 py-4
-                        rounded-2xl
-                        bg-card/80
-                        backdrop-blur-sm
-                        border border-border
-                        shadow-sm
-                        hover:shadow-lg
-                        hover:-translate-y-1
-                        transition-all duration-300
-                        min-w-fit
-                      "
-                    >
-                      <Icon size={24} className="shrink-0" />
-                      <span className="whitespace-nowrap font-medium">
-                        {skill.name}
-                      </span>
-                    </div>
-                  );
-                }
-              )}
+              {[...engineeringSkills, ...engineeringSkills].map((skill, index) => {
+                const Icon = skill.icon;
+                return (
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-card/80 backdrop-blur-sm border border-border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 min-w-fit"
+                  >
+                    <Icon size={24} className="shrink-0" />
+                    <span className="whitespace-nowrap font-medium">
+                      {skill.name}
+                    </span>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
@@ -222,4 +164,3 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
-
