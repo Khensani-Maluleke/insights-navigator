@@ -56,34 +56,40 @@ const AboutSection = () => {
 
              <div className="text-muted-foreground leading-relaxed">
               <p>
-                Data Science, business intelligence, analytics & insights
-                professional with ~7 years experience across management consulting
-                and financial services.
+               I am a Data Science, Business Intelligence, Analytics, and Insights professional 
+               with approximately seven years of experience across management consulting and 
+               financial services. Throughout my career, I have leveraged data-driven insights
+               to support strategic decision-making, drive business growth, and improve operational
+               performance.
+
               </p>
             </div>
 
             <div className="text-muted-foreground leading-relaxed">
               <p>
-                Successfully led projects on implementation of enterprise systems,
-                product growth, intelligent automation (RPA), data aggregation,
-                and data governance. Used analytics and machine learning insights
-                to improve customer experience, profitability, and operational efficiency.
+               I have successfully led projects involving the implementation of enterprise systems,
+               product growth initiatives, intelligent automation (RPA), data aggregation,
+               and data governance. By leveraging analytics, business intelligence, and
+               machine learning insights, I have helped improve customer experience, enhance profitability,
+               optimize business processes, and drive operational efficiency.
+
               </p>
             </div>
 
             <div className="text-muted-foreground leading-relaxed">
               <p>
-                Tshilidzi’s unorthodox way of thinking allows her to generate
-                out-of-the-box and practical solutions. She is goal-oriented,
-                enjoys challenges, and consistently maintains high standards of quality.
+                My unorthodox approach to problem-solving enables me to develop innovative and practical
+               solutions to complex challenges. I am highly goal-oriented, thrive in dynamic environments,
+               and consistently hold myself to high standards of excellence, ensuring that my work reflects both quality and professionalism.
+
               </p>
             </div>
 
             <div className="text-muted-foreground leading-relaxed">
               <p>
-                She thrives in fast-paced, team-oriented environments and is
-                proactive, forward-thinking, and detail-oriented. Her communication
-                and problem-solving skills have been key strengths throughout her career.
+                I thrive in fast-paced, team-oriented environments and am
+                proactive, forward-thinking, and detail-oriented. My communication
+                and problem-solving skills have been key strengths throughout my career.
               </p>
             </div>
 
