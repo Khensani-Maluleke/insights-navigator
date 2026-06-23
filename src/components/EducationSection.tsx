@@ -1,4 +1,4 @@
-import { GraduationCap, Award } from "lucide-react";
+import { GraduationCap, Award, ExternalLink, MapPin, Calendar } from "lucide-react";
 
 const education = [
   {
@@ -38,37 +38,126 @@ const education = [
 ];
 
 const EducationSection = () => {
+  const certs = education.filter((e) => e.type === "cert");
+  const degrees = education.filter((e) => e.type === "degree");
+
+  const DegreeCard = ({ item }: { item: (typeof education)[0] }) => (
+     <div className="relative group flex items-start gap-4 p-5 rounded-2xl bg-card border border-border hover:border-lilac/40 hover:shadow-lg transition-all duration-300 overflow-hidden">
+      {/* Subtle background glow on hover */}
+      <div className="absolute inset-0 bg-lilac/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none" />
+
+      <div className="shrink-0 p-2.5 rounded-xl bg-lilac-light">
+        <GraduationCap className="w-5 h-5 text-lilac" />
+      </div>
+
+      <div className="flex flex-col gap-1 min-w-0">
+        <h3 className="font-serif font-semibold text-foreground leading-snug">{item.title}</h3>
+        <p className="text-sm font-medium text-lilac">{item.institution}</p>
+        <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2">
+          <span className="flex items-center gap-1 text-xs text-muted-foreground">
+            <Calendar className="w-3 h-3" /> {item.date}
+          </span>
+          <span className="flex items-center gap-1 text-xs text-muted-foreground">
+            <MapPin className="w-3 h-3" /> {item.country}
+          </span>
+        </div>
+        {item.link && (
+          <a
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-xs text-lilac hover:underline mt-2 w-fit"
+          >
+            Visit institution <ExternalLink className="w-3 h-3" />
+          </a>
+        )}
+      </div>
+    </div>
+  );
+
+  const CertCard = ({ item }: { item: (typeof education)[0] }) => (
+    <div className="relative group flex items-start gap-4 p-5 rounded-2xl bg-card border border-border hover:border-lilac/40 hover:shadow-lg transition-all duration-300 overflow-hidden">
+      {/* Subtle background glow on hover */}
+      <div className="absolute inset-0 bg-lilac/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none" />
+
+      <div className="shrink-0 p-2.5 rounded-xl bg-lilac-light">
+        <Award className="w-5 h-5 text-lilac" />
+      </div>
+
+      <div className="flex flex-col gap-0.5 min-w-0">
+        {/* Certified badge */}
+        <span className="inline-flex w-fit items-center gap-1 px-2 py-0.5 rounded-full bg-lilac/10 text-lilac text-[10px] font-semibold uppercase tracking-wider mb-1">
+          ✦ Certified
+        </span>
+        <h3 className="font-serif font-semibold text-foreground leading-snug text-sm">{item.title}</h3>
+        <p className="text-xs font-medium text-lilac">{item.institution}</p>
+        <div className="flex flex-wrap gap-x-3 gap-y-1 mt-1.5">
+          <span className="flex items-center gap-1 text-xs text-muted-foreground">
+            <Calendar className="w-3 h-3" /> {item.date}
+          </span>
+          <span className="flex items-center gap-1 text-xs text-muted-foreground">
+            <MapPin className="w-3 h-3" /> {item.country}
+          </span>
+        </div>
+        {item.detail && (
+          <p className="text-[11px] text-muted-foreground mt-1 font-mono tracking-wide">{item.detail}</p>
+        )}
+        {item.link && (
+          <a
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-xs text-lilac hover:underline mt-2 w-fit"
+          >
+            Verify credential <ExternalLink className="w-3 h-3" />
+          </a>
+        )}
+      </div>
+    </div>
+  );
+
   return (
     <section id="education" className="section-padding bg-background">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-serif font-bold text-gradient mb-12 text-center">
-          Education and Training
-        </h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          {education.map((item, idx) => (
-            <div key={idx} className="bg-card rounded-2xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-xl bg-lilac-light shrink-0">
-                  {item.type === "cert" ? (
-                    <Award className="w-6 h-6 text-lilac" />
-                  ) : (
-                    <GraduationCap className="w-6 h-6 text-lilac" />
-                  )}
-                </div>
-                <div>
-                  <h3 className="font-sans font-semibold text-foreground">{item.title}</h3>
-                  <p className="text-sm text-lilac font-medium">{item.institution}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{item.date}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{item.country}</p>
-                  {item.detail && <p className="text-xs text-muted-foreground">{item.detail}</p>}
-                  {item.link && (
-                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-xs text-lilac hover:underline mt-1 inline-block">
-                      Verify →
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
+        {/* Header */}
+        <div className="text-center mb-14">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lilac mb-3">
+            Academic &amp; Professional
+          </p>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gradient">
+            Education &amp; Training
+          </h2>
+        </div>
+
+        {/* Degrees — full width stacked */}
+        <div className="mb-10">
+           <div className="flex items-center gap-4 mb-10">
+          <div className="flex-1 h-px bg-border" />
+          <span className="text-[11px] font-serif font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+            DEGREES
+          </span>
+          <div className="flex-1 h-px bg-border" />
+        </div>
+          <div className="grid md:grid-cols-2 gap-4">
+            {degrees.map((item, idx) => (
+              <DegreeCard key={idx} item={item} />
+            ))}
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="flex items-center gap-4 mb-10">
+          <div className="flex-1 h-px bg-border" />
+          <span className="text-[11px] font-serif font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+            Certifications
+          </span>
+          <div className="flex-1 h-px bg-border" />
+        </div>
+
+        {/* Certs — tighter grid */}
+        <div className="grid sm:grid-cols-2 gap-4">
+          {certs.map((item, idx) => (
+            <CertCard key={idx} item={item} />
           ))}
         </div>
       </div>

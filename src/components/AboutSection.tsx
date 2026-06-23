@@ -2,42 +2,11 @@ import {
   User,
   Calendar,
   Flag,
-  Database,
-  BarChart3,
-  FileSpreadsheet,
-  FileText,
-  Presentation,
-  Workflow,
-  Code2,
 } from "lucide-react";
-
-import { SiPython, SiSalesforce, SiR } from "react-icons/si";
 
 import tshilidzi2 from "../assets/tshilidzi2.jpeg";
 
 const AboutSection = () => {
-  const analyticsSkills = [
-    { name: "Power BI", icon: BarChart3 },
-    { name: "Tableau", icon: BarChart3 },
-    { name: "SQL", icon: Database },
-    { name: "Oracle", icon: Database },
-    { name: "Microsoft Excel", icon: FileSpreadsheet },
-    { name: "Microsoft Word", icon: FileText },
-    { name: "PowerPoint", icon: Presentation },
-    { name: "R Programming", icon: SiR },
-  ];
-
-  const engineeringSkills = [
-    { name: "Python", icon: SiPython },
-    { name: "Java", icon: Code2 },
-    { name: "C++", icon: Code2 },
-    { name: "C#", icon: Code2 },
-    { name: "Salesforce", icon: SiSalesforce },
-    { name: "Power Platform", icon: Workflow },
-    { name: "Power Apps", icon: Workflow },
-    { name: "Power Automate", icon: Workflow },
-  ];
-
   return (
     <section id="about" className="section-padding bg-background">
       <div className="max-w-6xl mx-auto">
@@ -79,83 +48,59 @@ const AboutSection = () => {
 
           {/* IMAGE */}
           <div className="rounded-2xl overflow-hidden shadow-xl">
-            <img src={tshilidzi2} alt="Tshilidzi" className="w-full h-auto" />
+            <img
+              src={tshilidzi2}
+              alt="Tshilidzi"
+              className="w-full h-auto"
+            />
           </div>
 
           {/* TEXT */}
           <div className="space-y-6 text-muted-foreground leading-relaxed">
 
             <p>
-              I am a Data Science, Business Intelligence, Analytics, and Insights professional
-              with approximately seven years of experience across management consulting and
-              financial services. Throughout my career, I have leveraged data-driven insights
-              to support strategic decision-making, drive business growth, and improve operational performance.
+              I am a Data Science, Business Intelligence, Analytics & Insights
+              professional with approximately 7 years of experience across
+              management consulting and financial services. 
             </p>
 
             <p>
-              I have successfully led projects involving the implementation of enterprise systems,
-              product growth initiatives, intelligent automation (RPA), data aggregation,
-              and data governance. By leveraging analytics, business intelligence, and
-              machine learning insights, I have helped improve customer experience, enhance profitability,
-              optimize business processes, and drive operational efficiency.
+              I have successfully led projects on the implementation of enterprise systems, product
+              growth, intelligent automation (RPA), data aggregation, and data
+              governance, utilizing insights and analytics from the deployment
+              of machine learning models and RPA solutions to improve customer
+              experience, bottom-line earnings, optimize business processes, as
+              well as operational efficiency. I am an expert in product and
+              macroeconomics analytics in the banking sector for South Africa
+              and other African regions.
             </p>
 
             <p>
-              My unorthodox approach to problem-solving enables me to develop innovative and practical
-              solutions to complex challenges. I am highly goal-oriented, thrive in dynamic environments,
-              and consistently hold myself to high standards of excellence.
+              My unorthodox way of thinking enables me to suggest a variety of
+              out-of-the-box and practical ideas when facing a problem. I am
+              goal-oriented and enjoy challenges as they increase my appetite
+              to learn. I consistently set high standards for myself and ensure
+              that my output is of high quality and reflective of my
+              professionalism.
+            </p>
+
+            <p>
+              My personality, networking, and people skills enable me to thrive
+              in team settings and cross-functional departments. I am also
+              enthusiastic about working in a fast-paced and team-oriented
+              environment. With my willingness to always learn and grow, I have
+              over the years developed solid competencies such as being
+              proactive, forward-thinking, and paying attention to detail.
+            </p>
+
+            <p>
+              I exhibit strong communication and problem-solving skills, which
+              have proven beneficial in my line of work. My soft skills are a
+              great contributor to the way I work and help cultivate a healthy
+              work culture for both myself and my colleagues.
             </p>
 
           </div>
-        </div>
-
-        {/* DIGITAL SKILLS */}
-        <div className="mt-24">
-
-          <h3 className="text-3xl md:text-4xl font-serif font-bold text-center mb-12">
-            Digital Skills
-          </h3>
-
-          {/* ROW 1 */}
-          <div className="overflow-hidden mb-6">
-            <div className="animate-marquee flex gap-4 min-w-max">
-              {[...analyticsSkills, ...analyticsSkills].map((skill, index) => {
-                const Icon = skill.icon;
-                return (
-                  <div
-                    key={index}
-                    className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-card/80 backdrop-blur-sm border border-border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 min-w-fit"
-                  >
-                    <Icon size={24} className="shrink-0" />
-                    <span className="whitespace-nowrap font-medium">
-                      {skill.name}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* ROW 2 */}
-          <div className="overflow-hidden">
-            <div className="animate-marquee-reverse flex gap-4 min-w-max">
-              {[...engineeringSkills, ...engineeringSkills].map((skill, index) => {
-                const Icon = skill.icon;
-                return (
-                  <div
-                    key={index}
-                    className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-card/80 backdrop-blur-sm border border-border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 min-w-fit"
-                  >
-                    <Icon size={24} className="shrink-0" />
-                    <span className="whitespace-nowrap font-medium">
-                      {skill.name}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
         </div>
 
       </div>

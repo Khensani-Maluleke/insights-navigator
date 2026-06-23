@@ -1,112 +1,158 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import {
+  BarChart3,
+  Database,
+  FileSpreadsheet,
+  Brain,
+  Code,
+  Settings,
+  LineChart,
+  Cpu,
+  Globe,
+  Presentation,
+  GitBranch,
+  Layers,
+  Users,
+  BookOpen,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react";
 
-const topSkills = [
-  { name: "Microsoft Excel" },
-  { name: "Power BI" },
-  { name: "SQL" },
-  { name: "Python" },
+/* ---------------- SKILLS DATA ---------------- */
+
+// ROW 1 — Microsoft Office Suite
+const officeSkills = [
+  { name: "Microsoft Word", icon: FileSpreadsheet },
+  { name: "Microsoft Excel", icon: FileSpreadsheet },
+  { name: "Advanced Excel (VBA)", icon: FileSpreadsheet },
+  { name: "Microsoft PowerPoint", icon: Presentation },
+  { name: "Microsoft Access", icon: Database },
+  { name: "Microsoft Visio", icon: GitBranch },
+  { name: "Microsoft Power Platform", icon: Settings },
 ];
 
-const moreSkills = [
-  { name: "Microsoft Word" },
-  { name: "Advanced Microsoft Excel" },
-  { name: "Microsoft PowerPoint" },
-  { name: "Microsoft Access" },
-  { name: "Microsoft Visio" },
-  { name: "Microsoft Power Platform" },
-  { name: "Power Apps" },
-  { name: "Power Automate" },
-  { name: "Oracle Database" },
-  { name: "Teradata" },
-  { name: "SAS" },
-  { name: "Tableau" },
-  { name: "QlikView 11 Developer" },
-  { name: "Salesforce Administration" },
-  { name: "Salesforce Business Analyst" },
-  { name: "Visual Studio" },
-  { name: "Visual Basic" },
-  { name: "Visual Basic for Applications (VBA)" },
-  { name: "Eclipse RCP" },
-  { name: "Control System Studio" },
-  { name: "Code::Blocks" },
-  { name: "R Programming" },
-  { name: "Java" },
-  { name: "C" },
-  { name: "C++" },
-  { name: "C#" },
-  { name: "JavaScript" },
-  { name: "HTML5" },
-  { name: "CSS3" },
-  { name: "Object-Oriented Programming" },
+// ROW 2 — Databases & Query Languages
+const databaseSkills = [
+  { name: "SQL (MySQL)", icon: Database },
+  { name: "Advanced SQL", icon: Database },
+  { name: "Oracle Database", icon: Database },
+  { name: "Teradata", icon: Database },
+  { name: "SAS", icon: BookOpen },
+  { name: "Microsoft Access", icon: Database },
+  { name: "Eclipse RCP / CSS", icon: Layers },
 ];
 
+// ROW 3 — BI & Analytics Tools
+const biSkills = [
+  { name: "Power BI", icon: BarChart3 },
+  { name: "Power Apps", icon: Settings },
+  { name: "Power Automate", icon: Settings },
+  { name: "QlikView 11", icon: BarChart3 },
+  { name: "Tableau", icon: LineChart },
+  { name: "Python", icon: Brain },
+  { name: "R Programming", icon: LineChart },
+];
+
+// ROW 4 — Programming Languages
+const programmingSkills = [
+  { name: "JavaScript", icon: Code },
+  { name: "HTML5 / CSS", icon: Globe },
+  { name: "Visual Basic (VBA)", icon: Code },
+  { name: "Visual Studio VB", icon: Code },
+  { name: "Java", icon: Cpu },
+  { name: "C / C++ / C#", icon: Cpu },
+  { name: "Code::Blocks", icon: Code },
+];
+
+// ROW 5 — Platforms & CRM
+const platformSkills = [
+  { name: "Salesforce Administration", icon: Users },
+  { name: "Salesforce Business Analyst", icon: Users },
+  { name: "Object-Oriented Programming", icon: Layers },
+  { name: "Power Platform", icon: Settings },
+  { name: "Eclipse RCP", icon: Layers },
+  { name: "Control System Studio", icon: Settings },
+  { name: "Visual Studio", icon: Code },
+];
+
+/* ---------------- COMPONENT ---------------- */
 const SkillsSection = () => {
   const [showMore, setShowMore] = useState(false);
 
-  const SkillCard = ({ name }: { name: string }) => (
-    <div className="flex items-center justify-center p-4 rounded-xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 min-h-[80px]">
-      <h3 className="text-center text-sm font-medium text-foreground leading-tight">
-        {name}
-      </h3>
-    </div>
-  );
+  const SkillCard = ({ skill }: { skill: any }) => {
+    const Icon = skill.icon;
+    return (
+      <div className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-card/80 backdrop-blur-sm border border-border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 min-w-fit">
+        <Icon size={22} className="shrink-0" />
+        <span className="whitespace-nowrap font-medium">{skill.name}</span>
+      </div>
+    );
+  };
+
+  const visibleRows = [
+    { skills: officeSkills, direction: "animate-marquee" },
+    { skills: databaseSkills, direction: "animate-marquee-reverse" },
+  ];
+
+  const hiddenRows = [
+    { skills: biSkills, direction: "animate-marquee" },
+    { skills: programmingSkills, direction: "animate-marquee-reverse" },
+    { skills: platformSkills, direction: "animate-marquee" },
+  ];
 
   return (
-    <section id="skills" className="py-16 relative overflow-hidden">
-      {/* Floating circles */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="floating-circle1 absolute w-20 h-20 bg-lilac-glow/40 rounded-full top-20 left-10"></div>
-        <div className="floating-circle2 absolute w-24 h-24 bg-lilac-glow/50 rounded-full top-40 right-20"></div>
-        <div className="floating-circle3 absolute w-16 h-16 bg-lilac-glow/35 rounded-full top-60 left-1/4"></div>
-        <div className="floating-circle4 absolute w-20 h-20 bg-lilac-glow/45 rounded-full bottom-40 left-20"></div>
-        <div className="floating-circle5 absolute w-14 h-14 bg-lilac-glow/55 rounded-full bottom-20 right-1/3"></div>
-        <div className="floating-circle6 absolute w-18 h-18 bg-lilac-glow/40 rounded-full top-1/2 right-10"></div>
-        <div className="floating-circle7 absolute w-16 h-16 bg-lilac-glow/50 rounded-full top-10 right-1/4"></div>
-        <div className="floating-circle8 absolute w-14 h-14 bg-lilac-glow/45 rounded-full bottom-60 left-1/2"></div>
-        <div className="floating-circle9 absolute w-20 h-20 bg-lilac-glow/35 rounded-full top-80 left-3/4"></div>
-        <div className="floating-circle10 absolute w-16 h-16 bg-lilac-glow/55 rounded-full bottom-10 right-1/4"></div>
-      </div>
+    <section id="skills" className="mt-24">
+      {/* TITLE */}
+      <h3 className="text-3xl md:text-4xl font-serif font-bold text-center mb-12">
+        Digital Skills
+      </h3>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-10">
-          <h2 className="mt-2 text-3xl md:text-4xl font-bold text-foreground">
-            Digital Skills
-          </h2>
-
-          <div className="mt-4 w-16 h-1 bg-primary rounded-full mx-auto" />
-        </div>
-
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-            {topSkills.map((skill) => (
-              <SkillCard key={skill.name} name={skill.name} />
-            ))}
-          </div>
-
-          <div className="flex justify-center mt-8">
-            <button
-              onClick={() => setShowMore(!showMore)}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 text-primary font-medium hover:bg-primary/20 transition-colors"
-              aria-expanded={showMore}
-              aria-controls="more-skills"
-            >
-              {showMore ? "See less" : "See more"}
-              {showMore ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
-            </button>
-          </div>
-
-          {showMore && (
-            <div
-              id="more-skills"
-              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-8 animate-fade-in"
-            >
-              {moreSkills.map((skill) => (
-                <SkillCard key={skill.name} name={skill.name} />
+      {/* ALWAYS VISIBLE — rows 1 & 2 */}
+      <div className="flex flex-col gap-6">
+        {visibleRows.map((row, rowIndex) => (
+          <div key={rowIndex} className="overflow-hidden">
+            <div className={`flex gap-4 min-w-max ${row.direction}`}>
+              {[...row.skills, ...row.skills].map((skill, index) => (
+                <SkillCard key={`visible-${rowIndex}-${index}`} skill={skill} />
               ))}
             </div>
+          </div>
+        ))}
+      </div>
+
+      {/* EXPANDABLE — rows 3–5 */}
+      <div
+        className={`flex flex-col gap-6 overflow-hidden transition-all duration-700 ease-in-out ${
+          showMore ? "max-h-[600px] opacity-100 mt-6" : "max-h-0 opacity-0 mt-0"
+        }`}
+      >
+        {hiddenRows.map((row, rowIndex) => (
+          <div key={rowIndex} className="overflow-hidden">
+            <div className={`flex gap-4 min-w-max ${row.direction}`}>
+              {[...row.skills, ...row.skills].map((skill, index) => (
+                <SkillCard key={`hidden-${rowIndex}-${index}`} skill={skill} />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* TOGGLE BUTTON */}
+      <div className="flex justify-center mt-8">
+        <button
+          onClick={() => setShowMore((prev) => !prev)}
+          className="flex items-center gap-2 px-6 py-3 rounded-full border border-border bg-card/80 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 font-medium text-sm"
+        >
+          {showMore ? (
+            <>
+              See Less <ChevronUp size={16} />
+            </>
+          ) : (
+            <>
+              See More <ChevronDown size={16} />
+            </>
           )}
-        </div>
+        </button>
       </div>
     </section>
   );
