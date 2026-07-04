@@ -120,7 +120,7 @@ const EducationSection = () => {
         {/* Header */}
         <div className="text-center mb-14">
          
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gradient">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foregroundnd mb-8">
             Education &amp; Training
           </h2>
         </div>

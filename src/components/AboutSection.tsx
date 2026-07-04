@@ -12,7 +12,7 @@ const AboutSection = () => {
       <div className="max-w-6xl mx-auto">
 
         {/* HEADING */}
-        <h2 className="text-3xl md:text-4xl font-serif font-bold text-gradient mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold text-foregroundnd mb-8">
           About Me
         </h2>
 
