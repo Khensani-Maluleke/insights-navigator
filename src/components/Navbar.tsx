@@ -15,7 +15,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-        <h2 className="text-3xl md:text-4xl font-serif font-bold text-foregroundnd mb-8">Mphadzha T</a>
+        <a
+  href="#"
+  className="text-2xl md:text-3xl font-serif font-bold text-foreground"
+>
+  Mphadzha T
+</a>
         <div className="hidden md:flex gap-6">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
