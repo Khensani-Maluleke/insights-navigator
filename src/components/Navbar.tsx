@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
         <a
   href="#"
-  className="text-2xl md:text-3xl font-serif font-bold text-foreground"
+  className="text-2xl md:text-xl font-serif font-bold text-foreground"
 >
   Mphadzha T
 </a>
