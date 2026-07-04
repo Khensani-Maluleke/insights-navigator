@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import {  Linkedin, Mail } from "lucide-react";
 
 const Footer = () => (
   <footer className="py-8 border-t border-border bg-card/50">
@@ -14,11 +14,7 @@ const Footer = () => (
             href: "https://www.linkedin.com/in/tshilidzi-mphadzha-759079129/",
             label: "LinkedIn",
           },
-          {
-            icon: Github,
-            href: "https://github.com/",
-            label: "GitHub",
-          },
+        
           {
             icon: Mail,
             href: "mailto:tshilidzimphadzha@gmail.com",

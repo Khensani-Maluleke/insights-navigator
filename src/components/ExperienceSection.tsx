@@ -15,7 +15,7 @@ const jobs: Job[] = [
   {
     title: "Analytics Manager",
     company: "Standard Bank | Group",
-    period: "Oct 2023 – Present",
+    period: " 18 Oct 2023 – Present",
     city: "Johannesburg, South Africa",
     overview:
       "Subject matter expert on product analytics, macroeconomics and business intelligence workstreams as a technical developer behind the MIS models servicing the Group PPB Team.",
@@ -29,7 +29,7 @@ const jobs: Job[] = [
   {
     title: "Manager, Data Steward",
     company: "Standard Bank | Standard Trust Limited",
-    period: "Mar 2022 – Oct 2023",
+    period: "31 Mar 2022 – 17 Oct 2023",
     city: "Johannesburg, South Africa",
     overview:
       "Lead as subject matter expert on all data quality initiatives, ownership, and mature information management practice.",
@@ -45,7 +45,7 @@ const jobs: Job[] = [
   {
     title: "Senior Dashboard Analyst: Intelligent Automation Data & Metrics",
     company: "Standard Bank | South Africa",
-    period: "Jan 2021 – Mar 2022",
+    period: "31 Jan 2021 – 30 Mar 2022",
     city: "Johannesburg, South Africa",
     overview:
       "Build scalable infrastructure for delivering business insights from raw data sources, optimizing data flow and collection.",
@@ -57,7 +57,7 @@ const jobs: Job[] = [
   {
     title: "Senior Analyst: Data Sourcing & Reporting",
     company: "Standard Bank | South Africa",
-    period: "Feb 2020 – Jan 2021",
+    period: "29 Feb 2020 – 29 Jan 2021",
     city: "Johannesburg, South Africa",
     overview:
       "Provide Group Vehicle and Asset Finance (VAF) team with insights and analytics using analytical techniques and economic data analysis.",
@@ -70,7 +70,7 @@ const jobs: Job[] = [
   {
     title: "Graduate Trainee: Data Science & Analytics",
     company: "Standard Bank | South Africa",
-    period: "Oct 2018 – Feb 2020",
+    period: "31 Oct 2018 – 28 Feb 2020",
     city: "Johannesburg, South Africa",
     overview:
       "Support business objectives through adoption of data tools and methodologies to provide insights for profitability, market share, and efficiency.",
@@ -104,7 +104,7 @@ const jobs: Job[] = [
   {
     title: "Management Consultant: Advisory",
     company: "PricewaterhouseCoopers (PwC) | South Africa",
-    period: "Dec 2017 – Oct 2018",
+    period: "31 Dec 2017 – 29 Oct 2018",
     city: "Johannesburg, South Africa",
     overview:
       "Consulted across finance and technology scope, advising on reporting and system audit standards.",

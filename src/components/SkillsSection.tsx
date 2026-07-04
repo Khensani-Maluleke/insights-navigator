@@ -1,158 +1,154 @@
-import { useState } from "react";
 import {
   BarChart3,
+  Code2,
   Database,
-  FileSpreadsheet,
-  Brain,
-  Code,
-  Settings,
-  LineChart,
   Cpu,
+  Zap,
+  Wrench,
   Globe,
-  Presentation,
-  GitBranch,
-  Layers,
-  Users,
-  BookOpen,
-  ChevronDown,
-  ChevronUp,
+  FileText,
 } from "lucide-react";
-
-/* ---------------- SKILLS DATA ---------------- */
-
-// ROW 1 — Microsoft Office Suite
-const officeSkills = [
-  { name: "Microsoft Word", icon: FileSpreadsheet },
-  { name: "Microsoft Excel", icon: FileSpreadsheet },
-  { name: "Advanced Excel (VBA)", icon: FileSpreadsheet },
-  { name: "Microsoft PowerPoint", icon: Presentation },
-  { name: "Microsoft Access", icon: Database },
-  { name: "Microsoft Visio", icon: GitBranch },
-  { name: "Microsoft Power Platform", icon: Settings },
+export const SKILL_GROUPS = [
+  {
+    icon: BarChart3,
+    title: "Business Intelligence & Analytics",
+    items: [
+      "Power BI",
+      "Tableau",
+      "QlikView 11 Developer",
+      "Microsoft Excel",
+      "Advanced Excel",
+    ],
+  },
+  {
+    icon: Code2,
+    title: "Programming & Software Development",
+    items: [
+      "Python",
+      "Java",
+      "C",
+      "C++",
+      "C#",
+      "JavaScript",
+      "Object-Oriented Programming",
+    ],
+  },
+  {
+    icon: Database,
+    title: "Databases & Data Warehousing",
+    items: [
+      "SQL",
+      "Advanced SQL",
+      "MySQL",
+      "Oracle Database",
+      "Teradata",
+      "Microsoft Access",
+    ],
+  },
+  {
+    icon: Cpu,
+    title: "Data Science & Statistical Computing",
+    items: [
+      "R Programming",
+      "SAS",
+    ],
+  },
+  {
+    icon: Zap,
+    title: "Automation & Low-Code",
+    items: [
+      "Power Platform",
+      "Power Apps",
+      "Power Automate",
+      "Salesforce Administration",
+      "Salesforce Business Analyst",
+    ],
+  },
+  {
+    icon: Wrench,
+    title: "Development Tools",
+    items: [
+      "Visual Studio",
+      "Visual Basic",
+      "VBA",
+      "Eclipse RCP",
+      "Control System Studio",
+      "Code::Blocks",
+    ],
+  },
+  {
+    icon: Globe,
+    title: "Web Technologies",
+    items: [
+      "HTML5",
+      "CSS3",
+    ],
+  },
+  {
+    icon: FileText,
+    title: "Productivity Suite",
+    items: [
+      "Microsoft Word",
+      "PowerPoint",
+      "Microsoft Visio",
+    ],
+  },
 ];
 
-// ROW 2 — Databases & Query Languages
-const databaseSkills = [
-  { name: "SQL (MySQL)", icon: Database },
-  { name: "Advanced SQL", icon: Database },
-  { name: "Oracle Database", icon: Database },
-  { name: "Teradata", icon: Database },
-  { name: "SAS", icon: BookOpen },
-  { name: "Microsoft Access", icon: Database },
-  { name: "Eclipse RCP / CSS", icon: Layers },
-];
-
-// ROW 3 — BI & Analytics Tools
-const biSkills = [
-  { name: "Power BI", icon: BarChart3 },
-  { name: "Power Apps", icon: Settings },
-  { name: "Power Automate", icon: Settings },
-  { name: "QlikView 11", icon: BarChart3 },
-  { name: "Tableau", icon: LineChart },
-  { name: "Python", icon: Brain },
-  { name: "R Programming", icon: LineChart },
-];
-
-// ROW 4 — Programming Languages
-const programmingSkills = [
-  { name: "JavaScript", icon: Code },
-  { name: "HTML5 / CSS", icon: Globe },
-  { name: "Visual Basic (VBA)", icon: Code },
-  { name: "Visual Studio VB", icon: Code },
-  { name: "Java", icon: Cpu },
-  { name: "C / C++ / C#", icon: Cpu },
-  { name: "Code::Blocks", icon: Code },
-];
-
-// ROW 5 — Platforms & CRM
-const platformSkills = [
-  { name: "Salesforce Administration", icon: Users },
-  { name: "Salesforce Business Analyst", icon: Users },
-  { name: "Object-Oriented Programming", icon: Layers },
-  { name: "Power Platform", icon: Settings },
-  { name: "Eclipse RCP", icon: Layers },
-  { name: "Control System Studio", icon: Settings },
-  { name: "Visual Studio", icon: Code },
-];
-
-/* ---------------- COMPONENT ---------------- */
 const SkillsSection = () => {
-  const [showMore, setShowMore] = useState(false);
-
-  const SkillCard = ({ skill }: { skill: any }) => {
-    const Icon = skill.icon;
-    return (
-      <div className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-card/80 backdrop-blur-sm border border-border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 min-w-fit">
-        <Icon size={22} className="shrink-0" />
-        <span className="whitespace-nowrap font-medium">{skill.name}</span>
-      </div>
-    );
-  };
-
-  const visibleRows = [
-    { skills: officeSkills, direction: "animate-marquee" },
-    { skills: databaseSkills, direction: "animate-marquee-reverse" },
-  ];
-
-  const hiddenRows = [
-    { skills: biSkills, direction: "animate-marquee" },
-    { skills: programmingSkills, direction: "animate-marquee-reverse" },
-    { skills: platformSkills, direction: "animate-marquee" },
-  ];
-
   return (
-    <section id="skills" className="mt-24">
-      {/* TITLE */}
-      <h3 className="text-3xl md:text-4xl font-serif font-bold text-center mb-12">
-        Digital Skills
-      </h3>
+    <section
+      id="skills"
+      className="py-24 bg-gradient-to-b from-background to-secondary/20"
+    >
+      <div className="container mx-auto px-6">
+        {/* Heading */}
+        <div className="text-center mb-14">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+            Digital Skills
+          </h2>
 
-      {/* ALWAYS VISIBLE — rows 1 & 2 */}
-      <div className="flex flex-col gap-6">
-        {visibleRows.map((row, rowIndex) => (
-          <div key={rowIndex} className="overflow-hidden">
-            <div className={`flex gap-4 min-w-max ${row.direction}`}>
-              {[...row.skills, ...row.skills].map((skill, index) => (
-                <SkillCard key={`visible-${rowIndex}-${index}`} skill={skill} />
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+            Technologies, platforms and tools I use to build software,
+            automate workflows and deliver business intelligence solutions.
+          </p>
+        </div>
 
-      {/* EXPANDABLE — rows 3–5 */}
-      <div
-        className={`flex flex-col gap-6 overflow-hidden transition-all duration-700 ease-in-out ${
-          showMore ? "max-h-[600px] opacity-100 mt-6" : "max-h-0 opacity-0 mt-0"
-        }`}
-      >
-        {hiddenRows.map((row, rowIndex) => (
-          <div key={rowIndex} className="overflow-hidden">
-            <div className={`flex gap-4 min-w-max ${row.direction}`}>
-              {[...row.skills, ...row.skills].map((skill, index) => (
-                <SkillCard key={`hidden-${rowIndex}-${index}`} skill={skill} />
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
+        {/* Skills Grid */}
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          {SKILL_GROUPS.map((group) => {
+            const Icon = group.icon;
 
-      {/* TOGGLE BUTTON */}
-      <div className="flex justify-center mt-8">
-        <button
-          onClick={() => setShowMore((prev) => !prev)}
-          className="flex items-center gap-2 px-6 py-3 rounded-full border border-border bg-card/80 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 font-medium text-sm"
-        >
-          {showMore ? (
-            <>
-              See Less <ChevronUp size={16} />
-            </>
-          ) : (
-            <>
-              See More <ChevronDown size={16} />
-            </>
-          )}
-        </button>
+            return (
+              <div
+                key={group.title}
+                className="rounded-3xl border border-border bg-card p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              >
+                {/* Icon */}
+                <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-black text-white">
+                  <Icon size={30} />
+                </div>
+
+                {/* Title */}
+                <h3 className="text-3xl font-bold mb-6">
+                  {group.title}
+                </h3>
+
+                {/* Pills */}
+                <div className="flex flex-wrap gap-2">
+                  {group.items.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full border border-border bg-secondary/40 px-3 py-1.5 text-xs font-medium transition-all duration-300 hover:bg-primary hover:text-primary-foreground"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

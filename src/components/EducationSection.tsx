@@ -51,13 +51,13 @@ const EducationSection = () => {
       </div>
 
       <div className="flex flex-col gap-1 min-w-0">
-        <h3 className="font-serif font-semibold text-foreground leading-snug">{item.title}</h3>
-        <p className="text-sm font-medium text-lilac">{item.institution}</p>
+        <h3 className="text-base md:text-lg font-serif font-semibold text-foreground leading-snug">{item.title}</h3>
+        <p className="text-sm md:text-base font-medium text-lilac">{item.institution}</p>
         <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2">
-          <span className="flex items-center gap-1 text-xs text-muted-foreground">
+          <span className="flex items-center gap-1 text-sm text-muted-foreground">
             <Calendar className="w-3 h-3" /> {item.date}
           </span>
-          <span className="flex items-center gap-1 text-xs text-muted-foreground">
+          <span className="flex items-center gap-1 text-sm text-muted-foreground">
             <MapPin className="w-3 h-3" /> {item.country}
           </span>
         </div>
@@ -66,7 +66,7 @@ const EducationSection = () => {
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-xs text-lilac hover:underline mt-2 w-fit"
+            className="inline-flex items-center gap-1 text-sm text-lilac hover:underline mt-2 w-fit"
           >
             Visit institution <ExternalLink className="w-3 h-3" />
           </a>
@@ -86,28 +86,28 @@ const EducationSection = () => {
 
       <div className="flex flex-col gap-0.5 min-w-0">
         {/* Certified badge */}
-        <span className="inline-flex w-fit items-center gap-1 px-2 py-0.5 rounded-full bg-lilac/10 text-lilac text-[10px] font-semibold uppercase tracking-wider mb-1">
+        <span className="inline-flex w-fit items-center gap-1 px-2 py-0.5 rounded-full bg-lilac/10 text-lilac text-xs font-semibold uppercase tracking-wider mb-1">
           ✦ Certified
         </span>
-        <h3 className="font-serif font-semibold text-foreground leading-snug text-sm">{item.title}</h3>
-        <p className="text-xs font-medium text-lilac">{item.institution}</p>
+        <h3 className="text-base md:text-lg font-serif font-semibold text-foreground leading-snug">{item.title}</h3>
+        <p className="text-sm md:text-base font-medium text-lilac">{item.institution}</p>
         <div className="flex flex-wrap gap-x-3 gap-y-1 mt-1.5">
-          <span className="flex items-center gap-1 text-xs text-muted-foreground">
+          <span className="flex items-center gap-1 text-sm text-muted-foreground">
             <Calendar className="w-3 h-3" /> {item.date}
           </span>
-          <span className="flex items-center gap-1 text-xs text-muted-foreground">
+          <span className="flex items-center gap-1 text-sm text-muted-foreground">
             <MapPin className="w-3 h-3" /> {item.country}
           </span>
         </div>
         {item.detail && (
-          <p className="text-[11px] text-muted-foreground mt-1 font-mono tracking-wide">{item.detail}</p>
+          <p className="text-sm text-muted-foreground mt-1 font-mono tracking-wide">{item.detail}</p>
         )}
         {item.link && (
           <a
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-xs text-lilac hover:underline mt-2 w-fit"
+            className="inline-flex items-center gap-1 text-sm text-lilac hover:underline mt-2 w-fit"
           >
             Verify credential <ExternalLink className="w-3 h-3" />
           </a>
