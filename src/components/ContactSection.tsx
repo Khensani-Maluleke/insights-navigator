@@ -25,7 +25,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="section-padding bg-background">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-serif font-bold text-gradient mb-8">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold text-foregroundnd mb-8">
           Get in Touch
         </h2>
 

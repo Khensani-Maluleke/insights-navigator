@@ -145,7 +145,7 @@ const EducationSection = () => {
         <div className="flex items-center gap-4 mb-10">
           <div className="flex-1 h-px bg-border" />
           <span className="text-[11px] font-serif font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            Certifications
+            CERTIFICATES
           </span>
           <div className="flex-1 h-px bg-border" />
         </div>
