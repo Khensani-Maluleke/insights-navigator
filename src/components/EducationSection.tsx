@@ -86,9 +86,7 @@ const EducationSection = () => {
 
       <div className="flex flex-col gap-0.5 min-w-0">
         {/* Certified badge */}
-        <span className="inline-flex w-fit items-center gap-1 px-2 py-0.5 rounded-full bg-lilac/10 text-lilac text-xs font-semibold uppercase tracking-wider mb-1">
-          ✦ Certified
-        </span>
+       
         <h3 className="text-base md:text-lg font-serif font-semibold text-foreground leading-snug">{item.title}</h3>
         <p className="text-sm md:text-base font-medium text-lilac">{item.institution}</p>
         <div className="flex flex-wrap gap-x-3 gap-y-1 mt-1.5">
@@ -121,9 +119,7 @@ const EducationSection = () => {
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lilac mb-3">
-            Academic &amp; Professional
-          </p>
+         
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-gradient">
             Education &amp; Training
           </h2>
