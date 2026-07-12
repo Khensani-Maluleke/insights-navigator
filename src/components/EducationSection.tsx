@@ -1,5 +1,5 @@
 import { GraduationCap, Award, ExternalLink, MapPin, Calendar } from "lucide-react";
-
+import educationImg from "@/assets/image.png";
 const education = [
   {
     type: "cert",
@@ -160,14 +160,15 @@ const EducationSection = () => {
           </div>
 
           <div className="rounded-3xl border border-emerald-400/30 bg-emerald-800/40 p-4 shadow-lg backdrop-blur-sm">
-            <div className="overflow-hidden rounded-2xl border border-white/10 bg-emerald-950/50 min-h-[420px] flex items-center justify-center">
-              <div className="text-center px-6">
-                <p className="text-sm uppercase tracking-[0.25em] text-emerald-200/80 mb-3">
-                  Photo Space
-                </p>
-                <p className="text-lg text-emerald-50/90">
-                  Add your picture here
-                </p>
+            <div className="rounded-2xl border border-white/10 bg-emerald-950/50 p-4 min-h-[420px]">
+              <div className="relative h-full min-h-[388px] overflow-hidden rounded-xl">
+                <img
+                  src={educationImg}
+                  alt="Profile photo"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
