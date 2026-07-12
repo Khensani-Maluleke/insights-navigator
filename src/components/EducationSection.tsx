@@ -164,7 +164,7 @@ const EducationSection = () => {
               <div className="relative h-full min-h-[388px] overflow-hidden rounded-xl">
                 <img
                   src={educationImg}
-                  alt="Profile photo"
+                  alt="Education photo"
                   fill
                   className="object-cover"
                   priority
