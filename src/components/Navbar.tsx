@@ -13,7 +13,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 pt-2 pb-2 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800/60">
+    <nav className="fixed top-0 left-0 right-0 z-50 pt-1 pb-1 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800/60">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
         <a
   href="#"
