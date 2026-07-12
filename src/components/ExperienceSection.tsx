@@ -129,7 +129,7 @@ const jobs: Job[] = [
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="section-padding bg-secondary/50">
+    <section id="experience" className="section-padding bg-emerald-900">
       <div className="max-w-5xl mx-auto">
 
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-foregroundnd mb-8">

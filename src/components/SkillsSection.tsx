@@ -99,7 +99,7 @@ const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="py-24 bg-gradient-to-b from-background to-secondary/20"
+      className="py-24 bg-emerald-900"
     >
       <div className="container mx-auto px-6">
         {/* Heading */}
@@ -122,10 +122,10 @@ const SkillsSection = () => {
             return (
               <div
                 key={group.title}
-                className="rounded-3xl border border-border bg-card p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                className="rounded-3xl border border-border bg-card p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group"
               >
                 {/* Icon */}
-                <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-black text-white">
+                <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-black text-white transition-colors duration-300 group-hover:bg-emerald-500 group-hover:text-emerald-50">
                   <Icon size={30} />
                 </div>
 

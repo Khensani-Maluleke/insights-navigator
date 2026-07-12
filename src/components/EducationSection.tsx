@@ -46,8 +46,8 @@ const EducationSection = () => {
       {/* Subtle background glow on hover */}
       <div className="absolute inset-0 bg-lilac/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none" />
 
-      <div className="shrink-0 p-2.5 rounded-xl bg-lilac-light">
-        <GraduationCap className="w-5 h-5 text-lilac" />
+      <div className="shrink-0 p-2.5 rounded-xl bg-emerald-500/10">
+        <GraduationCap className="w-5 h-5 text-emerald-400" />
       </div>
 
       <div className="flex flex-col gap-1 min-w-0">
@@ -66,7 +66,7 @@ const EducationSection = () => {
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-sm text-lilac hover:underline mt-2 w-fit"
+            className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-400 hover:text-emerald-300 hover:underline mt-2 w-fit"
           >
             Visit institution <ExternalLink className="w-3 h-3" />
           </a>
@@ -80,8 +80,8 @@ const EducationSection = () => {
       {/* Subtle background glow on hover */}
       <div className="absolute inset-0 bg-lilac/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none" />
 
-      <div className="shrink-0 p-2.5 rounded-xl bg-lilac-light">
-        <Award className="w-5 h-5 text-lilac" />
+      <div className="shrink-0 p-2.5 rounded-xl bg-emerald-500/10">
+        <Award className="w-5 h-5 text-emerald-400" />
       </div>
 
       <div className="flex flex-col gap-0.5 min-w-0">
@@ -105,7 +105,7 @@ const EducationSection = () => {
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-sm text-lilac hover:underline mt-2 w-fit"
+            className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-400 hover:text-emerald-300 hover:underline mt-2 w-fit"
           >
             Verify credential <ExternalLink className="w-3 h-3" />
           </a>
@@ -115,46 +115,62 @@ const EducationSection = () => {
   );
 
   return (
-    <section id="education" className="section-padding bg-background">
-      <div className="max-w-5xl mx-auto">
+    <section id="education" className="section-padding bg-emerald-900">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
-         
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-foregroundnd mb-8">
             Education &amp; Training
           </h2>
         </div>
 
-        {/* Degrees — full width stacked */}
-        <div className="mb-10">
-           <div className="flex items-center gap-4 mb-10">
-          <div className="flex-1 h-px bg-border" />
-          <span className="text-[11px] font-serif font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            DEGREES
-          </span>
-          <div className="flex-1 h-px bg-border" />
-        </div>
-          <div className="grid md:grid-cols-2 gap-4">
-            {degrees.map((item, idx) => (
-              <DegreeCard key={idx} item={item} />
-            ))}
+        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-start">
+          <div>
+            {/* Degrees */}
+            <div className="mb-10">
+              <div className="flex items-center gap-4 mb-10">
+                <div className="flex-1 h-px bg-border" />
+                <span className="text-[11px] font-serif font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                  DEGREES
+                </span>
+                <div className="flex-1 h-px bg-border" />
+              </div>
+              <div className="grid md:grid-cols-2 gap-4">
+                {degrees.map((item, idx) => (
+                  <DegreeCard key={idx} item={item} />
+                ))}
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="flex items-center gap-4 mb-10">
+              <div className="flex-1 h-px bg-border" />
+              <span className="text-[11px] font-serif font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                CERTIFICATES
+              </span>
+              <div className="flex-1 h-px bg-border" />
+            </div>
+
+            {/* Certs */}
+            <div className="grid sm:grid-cols-2 gap-4">
+              {certs.map((item, idx) => (
+                <CertCard key={idx} item={item} />
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Divider */}
-        <div className="flex items-center gap-4 mb-10">
-          <div className="flex-1 h-px bg-border" />
-          <span className="text-[11px] font-serif font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            CERTIFICATES
-          </span>
-          <div className="flex-1 h-px bg-border" />
-        </div>
-
-        {/* Certs — tighter grid */}
-        <div className="grid sm:grid-cols-2 gap-4">
-          {certs.map((item, idx) => (
-            <CertCard key={idx} item={item} />
-          ))}
+          <div className="rounded-3xl border border-emerald-400/30 bg-emerald-800/40 p-4 shadow-lg backdrop-blur-sm">
+            <div className="overflow-hidden rounded-2xl border border-white/10 bg-emerald-950/50 min-h-[420px] flex items-center justify-center">
+              <div className="text-center px-6">
+                <p className="text-sm uppercase tracking-[0.25em] text-emerald-200/80 mb-3">
+                  Photo Space
+                </p>
+                <p className="text-lg text-emerald-50/90">
+                  Add your picture here
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

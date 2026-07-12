@@ -15,12 +15,12 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 scroll-mt-28 bg-zinc-800"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 scroll-mt-28 bg-emerald-900"
     >
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 py-16 max-w-6xl mx-auto">
 
         {/* Badge */}
-        <span className="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-wider uppercase rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 animate-fade-up">
+        <span className="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-wider uppercase rounded-full bg-emerald-500/20 backdrop-blur-md text-emerald-50 border border-emerald-300/30 animate-fade-up">
           Data Science • Business Intelligence • Analytics • Insights Professional
         </span>
 
@@ -68,7 +68,7 @@ const HeroSection = () => {
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up">
           <Button
             size="lg"
-            className="bg-white text-zinc-900 hover:bg-white/90"
+            className="bg-emerald-500 text-white hover:bg-emerald-600"
             asChild
           >
             <a href="#about">About Me</a>
@@ -77,7 +77,7 @@ const HeroSection = () => {
           <Button
             variant="outline"
             size="lg"
-            className="border-white text-white hover:bg-white/10"
+            className="border-emerald-300 text-emerald-50 hover:bg-emerald-500/10"
             asChild
           >
             <a href="#contact">Get in Touch</a>
@@ -91,7 +91,7 @@ const HeroSection = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="p-3 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300"
+            className="p-3 rounded-full bg-emerald-500/20 backdrop-blur-md text-emerald-50 hover:bg-emerald-500/30 transition-all duration-300"
           >
             <Linkedin size={20} />
           </a>
@@ -99,7 +99,7 @@ const HeroSection = () => {
           <a
             href="mailto:tshilidzimphadzha@gmail.com"
             aria-label="Email"
-            className="p-3 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300"
+            className="p-3 rounded-full bg-emerald-500/20 backdrop-blur-md text-emerald-50 hover:bg-emerald-500/30 transition-all duration-300"
           >
             <Mail size={20} />
           </a>

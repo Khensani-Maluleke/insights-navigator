@@ -8,7 +8,7 @@ import tshilidzi2 from "../assets/tshilidzi2.jpeg";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="section-padding bg-background">
+    <section id="about" className="section-padding bg-emerald-900">
       <div className="max-w-6xl mx-auto">
 
         {/* HEADING */}

@@ -13,7 +13,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800/60">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
         <a
   href="#"
@@ -33,7 +33,7 @@ const Navbar = () => {
         </button>
       </div>
       {open && (
-        <div className="md:hidden bg-background border-b border-border px-4 pb-4 space-y-2">
+        <div className="md:hidden bg-zinc-950/95 border-b border-zinc-800 px-4 pb-4 space-y-2">
           {links.map((l) => (
             <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block text-sm text-muted-foreground py-2">
               {l.label}
