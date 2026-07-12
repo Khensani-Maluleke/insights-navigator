@@ -159,8 +159,7 @@ const EducationSection = () => {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-emerald-400/30 bg-emerald-800/40 p-4 shadow-lg backdrop-blur-sm">
-            <div className="rounded-2xl border border-white/10 bg-emerald-950/50 p-4 min-h-[420px]">
+        
               <div className="relative h-full min-h-[388px] overflow-hidden rounded-xl">
                 <img
                   src={educationImg}
@@ -170,8 +169,7 @@ const EducationSection = () => {
                   priority
                 />
               </div>
-            </div>
-          </div>
+        
         </div>
       </div>
     </section>
